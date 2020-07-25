@@ -57,8 +57,8 @@ const DEF = 2; //const should be declared and assinged at the same time.
 ```Javascript
 
 /**
-	* 1. Array
-	*/
+  * 1. Array
+  */
 let x = a;
 let y = b;
 
@@ -70,8 +70,8 @@ console.log(x, y); //b a
 
 
 /**
-	* 2. Object
-	*/
+  * 2. Object
+  */
 const obj = {
 	name: 'Kim',
 	lang: 'Eng',
@@ -86,8 +86,8 @@ let { name, lang, job } = obj;
 console.log(name, lang, job); // Kim Eng Dev
 
 /**
-	* 3. Nested Object
-	*/
+  * 3. Nested Object
+  */
 const profile = {
   name: 'Kim',
   stack: {
@@ -100,8 +100,8 @@ const { name, stack: { front } } = profile;
 console.log(name, front); //Kim HTML CSS JS
 
 /**
-	* 4. Usage example destructuring in variable assignment
-	*/
+  * 4. Usage example destructuring in variable assignment
+  */
 let country = 'Canada';
 let firstname = 'John';
 let lastname = 'Doe'
@@ -125,8 +125,8 @@ console.log(firstname, lastname, country); // Glad Chinda Canada
 ```Javascript
 
 /**
-	* 1. Basic
-	*/
+  * 1. Basic
+  */
 const a = 1;
 const b = 2;
 const c = "javascript developer";
@@ -139,8 +139,8 @@ console.log(str); /* I've been javascript developer xy\nz
 for 2 years. */
 
 /**
-	* 2. Tagged template function
-	*/
+  * 2. Tagged template function
+  */
 let person = 'Kim';
 let age = 28;
 
@@ -165,68 +165,6 @@ console.log(output);    //I'm Kim and 28 years old
 
 ## Q. What are the benefits of using spread syntax and how is it different from rest syntax?
 ## Q. Explain how "this" works in JavaScript. Can you give an example of one of the ways that working with "this" has changed in ES6?
-
-By default, "this" refers to a global object. 
-```Javascript
-function foo() {
-	console.log(this === window);
-}
-
-foo(); // true
-console.log(this === window); //true
-
-```
-
-In strict mode, "this" 
-```Javascript
-function foo() {
-	'use strict';
-	console.log(this);
-}
-foo(); // undefined
-```
-
-"this" refers a new instance
-```Javascript
-function Person(a, b){
-	this.first_name = a;
-	this.last_name = b;
-	
-	this.displayName = function() {
-		console.log(`${this.first_name} ${this.last_name}`);
-	}
-}
-
-let person = new Person("John", "Doe"); 
-person.displayName(); // John Doe
-
-let person2 = new Person("David", "Kim");
-person2.displayName(); // David Kim
-```
-
-"this" with call method
-```Javascript
-function Person(a, b){
-	this.first_name = a;
-	this.last_name = b;
-	
-	this.displayName = function() {
-		console.log(`${this.first_name} ${this.last_name}`);
-	}
-}
-
-let person = new Person("John", "Doe"); 
-person.displayName(); // John Doe
-
-let person2 = new Person("David", "Kim");
-person2.displayName(); // David Kim
-
-person.displayName.call(person2);
-
-```
-
-
-
 
 ## Q. Explain "Closure" with examples. What are the advantages of using ES6 maps over objects? What about using ES6 sets over arrays? 
 
